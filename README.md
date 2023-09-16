@@ -17,6 +17,9 @@ The Memento design pattern consists of three main components:
 
 3. **Caretaker**: Manages and keeps track of mementos. It provides a way to save and restore the originator's state. In our example, `TextEditorCaretaker` is the caretaker.
 
+## Class Diagram
+![class diagram](classdiagram.png)
+
 ## Real-World Applications
 
 The Memento design pattern finds applications in various scenarios, including:
