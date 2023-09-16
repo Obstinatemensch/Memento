@@ -1,21 +1,36 @@
 # Memento
-# Design Pattern: Observer Pattern
+# Design Pattern: Memento Pattern
 
 ## Overview
 
-Software design patterns are programming paradigms that describe reusable solutions to common design problems. They are not code snippets but templates for solving recurring issues in software design. While they are not a substitute for sound software design principles, they provide a solid starting point for designing and documenting software. Design patterns also facilitate effective communication of design decisions among developers.
+Software design patterns are programming paradigms that describe reusable solutions to common design problems. They provide a set of tried and tested solutions that can be applied to various situations, aiding in creating robust and maintainable software. The Memento design pattern is one such pattern.
 
-In this project, we demonstrate the Observer design pattern. The Observer pattern is a behavioral design pattern that enables the implementation of a subscription mechanism for notifying interested clients about events related to an observed object. It provides a means to subscribe to and unsubscribe from these events for objects that adhere to a subscriber interface. The Observer pattern is also referred to as the Publish-Subscribe pattern.
+The Memento pattern falls under the behavioral design patterns category. It addresses the need to capture and externalize an object's internal state, allowing it to be restored to that state at a later point in time. This pattern is particularly useful when dealing with undo mechanisms, history tracking, and preserving the state of an object for various purposes.
+
+## Memento Design Pattern
+
+The Memento design pattern consists of three main components:
+
+1. **Originator**: Represents the object whose state needs to be saved and restored. In our example, a `TextEditor` is the originator, and it maintains the text content.
+
+2. **Memento**: Represents the saved state of the originator. It stores the relevant state information. In our example, `TextEditorMemento` serves as the memento and encapsulates the saved text.
+
+3. **Caretaker**: Manages and keeps track of mementos. It provides a way to save and restore the originator's state. In our example, `TextEditorCaretaker` is the caretaker.
 
 ## Real-World Applications
 
-The Observer pattern finds its application in various real-world scenarios, including:
+The Memento design pattern finds applications in various scenarios, including:
 
-1. **GUI Applications:** It is used to notify the graphical user interface (GUI) of changes in the underlying data model, ensuring that the interface stays synchronized with the data.
+- **Undo/Redo Mechanisms**: It can be used to implement undo and redo functionality in applications where users need to revert to previous states.
 
-2. **Distributed Systems:** In applications involving distributed systems, the Observer pattern allows clients to be notified of changes in the underlying data model, ensuring data consistency across distributed components.
+- **Version Control Systems**: Mementos can be likened to snapshots or commits in version control systems, allowing you to go back to previous code versions.
 
-3. **Event-Driven Programming:** The Observer pattern is widely used in event-driven programming, where it enables the notification of subscribers about events, such as user interactions, system events, or custom events.
+- **Text Editors**: Text editors can use the Memento pattern to save and restore document states, enabling users to undo changes.
 
-By employing the Observer pattern, these applications achieve better decoupling, maintainability, and flexibility in managing and responding to changes.
+- **Gaming**: In games, it can be used to save and load game states or checkpoints.
 
+## Conclusion
+
+The Memento design pattern is a valuable tool in managing object states. It allows you to capture and restore an object's state without exposing its internal details. Whether you're building text editors, games, or applications with undo functionality, the Memento pattern can help you maintain a robust and user-friendly experience.
+
+In this example, we demonstrated the Memento pattern using a simple text editor application. However, its applicability extends to a wide range of software systems where state management is essential.
